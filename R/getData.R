@@ -17,7 +17,7 @@ getData <- function(country, adm_level=1, format='json') {
   format_endstring <- switch(format,
                           'json' = paste0('_', as.character(adm_level), '.json.zip'),
                           'shp' = "_shp.zip",
-                          'kmz' = '.kmz',
+                          'kmz' = paste0('_', as.character(adm_level), '.kmz'),
                           'gpkg' = '.gpkg')
   
   data_url <- paste0('https://geodata.ucdavis.edu/gadm/gadm4.1/',
