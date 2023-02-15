@@ -4,12 +4,12 @@
 if(!"sf" %in% installed.packages()){install.packages("sf")}
 library(sf)
 
-# output_dir = 'output'
-# if (!dir.exists(outpit_dir)){
-#   dir.create(output_dir)
-# }
+# set arguments
+args <- commandArgs(trailingOnly = T)
+country <- args[1]
+level <- args[2]
+ext <- args[3]
 
-
+# source and execute download
 source('R/getData.R')
-
-data <- getData('France', adm_level = 2, format = 'json')
+data <- getData(country, level, ext)
