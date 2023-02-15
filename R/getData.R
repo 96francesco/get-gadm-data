@@ -28,7 +28,7 @@ getData <- function(country, adm_level=1, format='json') {
   download.file(url = data_url, destfile = file.path(output_dir, 'gadm_data.zip'))
       unzip(paste0(output_dir, '/gadm_data.zip'), exdir = output_dir)
   
-  unlink(paste0(output_dir, glob2rx('/*.zip')))
+  unlink(paste0(output_dir, '/gadm_data.zip'))
 }
 
 

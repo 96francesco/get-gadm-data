@@ -12,4 +12,4 @@ library(sf)
 
 source('R/getData.R')
 
-data_url <- getData('France', adm_level = 2, format = 'json')
+data <- getData('France', adm_level = 2, format = 'json')
