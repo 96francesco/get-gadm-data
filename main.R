@@ -1,5 +1,9 @@
 #!/usr/bin/env Rscript
 
+# main.R
+# Repository: get-gadm-data
+# Author: Francesco Pasanisi
+
 # check if sf is installed an load it
 if(!"sf" %in% installed.packages()){install.packages("sf")}
 library(sf)
@@ -12,4 +16,4 @@ ext <- args[3]
 
 # source and execute download
 source('R/getData.R')
-data <- getData(country, level, ext)
+getData(country, level, ext)
