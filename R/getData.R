@@ -1,7 +1,18 @@
+# getData.R
+# Repository: get-gadm-data
+# Author: Francesco Pasanisi
 
 getData <- function(country, adm_level=1, format='json') {
-  #' !!!
-  #' 
+  #' Download file from the GADM database related to the
+  #' selected country, with the specifies administrative level
+  #' and extension. It creates a folder 'output' if it does not 
+  #' exist in the working directory.
+  #' @param country character that contains the name of the country of interest
+  #' @param adm_level optional integer to select the administrative level
+  #' @param format optional character to specify the desired output format
+  #' @return integer of length 0
+  #' @examples 
+  getData('Italy', 2, 'kmz')
   
   output_dir = 'output'
   if (!dir.exists(output_dir)) {
