@@ -11,8 +11,7 @@ getData <- function(country, adm_level=1, format='json') {
   #' @param adm_level optional integer to select the administrative level
   #' @param format optional character to specify the desired output format
   #' @return integer of length 0
-  #' @examples 
-  getData('Italy', 2, 'kmz')
+  #' @examples getData('Italy', 2, 'kmz')
   
   output_dir = 'output'
   if (!dir.exists(output_dir)) {
