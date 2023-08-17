@@ -3,6 +3,8 @@
 ## GADM data download
 
 Quickly download the data from the Database of Global Administrative Areas (GADM), with the desired administration level of the selected country.
+As this script uses the [sf](https://github.com/r-spatial/sf) package, it requires GDAL, GEOS and PROJ to be executed properly.
+
 
 Through a Bash terminal, clone the repository
 
